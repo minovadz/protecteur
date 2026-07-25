@@ -116,6 +116,8 @@
   .model-card.active{ border-color:var(--red); background:#EAF3FC; }
   .model-card h4{ font-size:14px; font-weight:900; color:var(--navy); margin-bottom:4px; }
   .model-card .mp{ font-size:16px; font-weight:900; color:var(--red); }
+  .model-card .mp-old{ font-size:12px; color:var(--muted); text-decoration:line-through; margin-inline-end:4px; }
+  .model-card .discount-tag{ display:inline-block; margin-top:4px; font-size:10px; font-weight:800; padding:2px 7px; border-radius:100px; background:#FDECEC; color:#C0392B; }
   .model-card{ position:relative; }
   .stock-tag{ display:inline-block; margin-top:7px; font-size:10.5px; font-weight:800; padding:3px 8px; border-radius:100px; }
   .stock-tag.limited{ background:#FFF3E0; color:#B26A00; }
@@ -246,7 +248,8 @@ src="https://www.facebook.com/tr?id=1677998319917755&ev=PageView&noscript=1"
     <div class="model-cards">
       <div class="model-card active" id="cardBms">
         <h4>BMS ELECTRIC</h4>
-        <div class="mp">2,750 DA</div>
+        <div><span class="mp-old">2,750 DA</span><span class="mp">2,500 DA</span></div>
+        <div class="discount-tag">🔥 خصم</div>
         <div class="stock-tag limited">⚡ كمية محدودة</div>
       </div>
       <div class="model-card" id="cardChnt">
@@ -278,7 +281,7 @@ src="https://www.facebook.com/tr?id=1677998319917755&ev=PageView&noscript=1"
 
       <label for="model">الموديل المطلوب</label>
       <select id="model" name="product_size" required>
-        <option value="BMS ELECTRIC - 2750 DA" data-price="2750" selected>BMS ELECTRIC — 2,750 DA (كمية محدودة)</option>
+        <option value="BMS ELECTRIC - 2500 DA" data-price="2500" selected>BMS ELECTRIC — 2,500 DA بدل 2,750 DA (عرض محدود)</option>
         <option value="CHNT - 4200 DA" data-price="4200">CHNT — 4,200 DA (كمية محدودة)</option>
       </select>
 
@@ -322,7 +325,7 @@ src="https://www.facebook.com/tr?id=1677998319917755&ev=PageView&noscript=1"
     </form>
 
     <div class="price-breakdown" id="priceBreakdown">
-      <div class="pb-row"><span>سعر المنتج</span><span id="pbProduct">2,720 DA</span></div>
+      <div class="pb-row"><span>سعر المنتج</span><span id="pbProduct">2,500 DA</span></div>
       <div class="pb-row"><span>سعر التوصيل</span><span id="pbDelivery">اختر ولايتك</span></div>
       <div class="pb-row pb-total"><span>المجموع</span><span id="pbTotal">—</span></div>
     </div>
@@ -340,7 +343,7 @@ src="https://www.facebook.com/tr?id=1677998319917755&ev=PageView&noscript=1"
     <details open>
       <summary>⚡ ما الفرق بين BMS ELECTRIC و CHNT؟</summary>
       <div class="faq-answer">
-        BMS ELECTRIC و CHNT موديلان يؤديان نفس وظيفة الحماية الكاملة للأجهزة، ويختلفان في السعر: BMS ELECTRIC بـ 2,750 DA و CHNT بـ 4,200 DA. تقدر تختار الموديل المتوفر لي يناسبك.
+        BMS ELECTRIC و CHNT موديلان يؤديان نفس وظيفة الحماية الكاملة للأجهزة، ويختلفان في السعر: BMS ELECTRIC بسعر مخفض 2,500 DA بدل 2,750 DA و CHNT بـ 4,200 DA. تقدر تختار الموديل المتوفر لي يناسبك.
         <div class="faq-note">💰 السعر المعروض ثابت لكل الطلبات، ويُضاف إليه فقط سعر التوصيل حسب ولايتك، ويظهر تلقائيًا عند تعبئة نموذج الطلب.</div>
       </div>
     </details>
@@ -517,7 +520,7 @@ src="https://www.facebook.com/tr?id=1677998319917755&ev=PageView&noscript=1"
   document.querySelectorAll('input[name="delivery_type"]').forEach(r => r.addEventListener('change', updateBreakdown));
 
   // اختيار الموديل بالضغط على البطاقة
-  cardBms.addEventListener('click', () => { modelSel.value = 'BMS ELECTRIC - 2750 DA'; updatePrice(); });
+  cardBms.addEventListener('click', () => { modelSel.value = 'BMS ELECTRIC - 2500 DA'; updatePrice(); });
   cardChnt.addEventListener('click', () => { modelSel.value = 'CHNT - 4200 DA'; updatePrice(); });
 
   document.getElementById('plusBtn').addEventListener('click', ()=>{ qty++; qtyVal.textContent=qty; qtyHidden.value=qty; updatePrice(); });
@@ -569,7 +572,7 @@ src="https://www.facebook.com/tr?id=1677998319917755&ev=PageView&noscript=1"
     }, 3000);
 
     // ⚠️ استبدل الرابط التالي برابط Web App الخاص بك من Google Apps Script
-    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyX5YylYzCk7Mlm4a04PN6PjawMuetisKUtMnoGtLUTg9H9-ylXi50FrCFU2DyfvC93/exec';
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxQb3Ktrw2W1sIyo4LR-AapDakejbbFrcJvKcE6XCKucoi-PEN2x0OJjV2ThuAYpYQ/exec';
 
     const formData = new FormData(orderForm);
     const controller = new AbortController();
