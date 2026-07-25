@@ -248,7 +248,7 @@ src="https://www.facebook.com/tr?id=1677998319917755&ev=PageView&noscript=1"
     <div class="model-cards">
       <div class="model-card active" id="cardBms">
         <h4>BMS ELECTRIC</h4>
-        <div><span class="mp-old">2,750 DA</span><span class="mp">2,500 DA</span></div>
+        <div><span class="mp-old">2,750 DA</span><span class="mp">2,400 DA</span></div>
         <div class="discount-tag">🔥 خصم</div>
         <div class="stock-tag limited">⚡ كمية محدودة</div>
       </div>
@@ -281,7 +281,7 @@ src="https://www.facebook.com/tr?id=1677998319917755&ev=PageView&noscript=1"
 
       <label for="model">الموديل المطلوب</label>
       <select id="model" name="product_size" required>
-        <option value="BMS ELECTRIC - 2500 DA" data-price="2500" selected>BMS ELECTRIC — 2,500 DA بدل 2,750 DA (عرض محدود)</option>
+        <option value="BMS ELECTRIC - 2400 DA" data-price="2400" selected>BMS ELECTRIC — 2,400 DA بدل 2,750 DA (عرض محدود)</option>
         <option value="CHNT - 4200 DA" data-price="4200">CHNT — 4,200 DA (كمية محدودة)</option>
       </select>
 
@@ -325,7 +325,7 @@ src="https://www.facebook.com/tr?id=1677998319917755&ev=PageView&noscript=1"
     </form>
 
     <div class="price-breakdown" id="priceBreakdown">
-      <div class="pb-row"><span>سعر المنتج</span><span id="pbProduct">2,500 DA</span></div>
+      <div class="pb-row"><span>سعر المنتج</span><span id="pbProduct">2,400 DA</span></div>
       <div class="pb-row"><span>سعر التوصيل</span><span id="pbDelivery">اختر ولايتك</span></div>
       <div class="pb-row pb-total"><span>المجموع</span><span id="pbTotal">—</span></div>
     </div>
@@ -343,7 +343,7 @@ src="https://www.facebook.com/tr?id=1677998319917755&ev=PageView&noscript=1"
     <details open>
       <summary>⚡ ما الفرق بين BMS ELECTRIC و CHNT؟</summary>
       <div class="faq-answer">
-        BMS ELECTRIC و CHNT موديلان يؤديان نفس وظيفة الحماية الكاملة للأجهزة، ويختلفان في السعر: BMS ELECTRIC بسعر مخفض 2,500 DA بدل 2,750 DA و CHNT بـ 4,200 DA. تقدر تختار الموديل المتوفر لي يناسبك.
+        BMS ELECTRIC و CHNT موديلان يؤديان نفس وظيفة الحماية الكاملة للأجهزة، ويختلفان في السعر: BMS ELECTRIC بسعر مخفض 2,400 DA بدل 2,750 DA و CHNT بـ 4,200 DA. تقدر تختار الموديل المتوفر لي يناسبك.
         <div class="faq-note">💰 السعر المعروض ثابت لكل الطلبات، ويُضاف إليه فقط سعر التوصيل حسب ولايتك، ويظهر تلقائيًا عند تعبئة نموذج الطلب.</div>
       </div>
     </details>
@@ -520,7 +520,7 @@ src="https://www.facebook.com/tr?id=1677998319917755&ev=PageView&noscript=1"
   document.querySelectorAll('input[name="delivery_type"]').forEach(r => r.addEventListener('change', updateBreakdown));
 
   // اختيار الموديل بالضغط على البطاقة
-  cardBms.addEventListener('click', () => { modelSel.value = 'BMS ELECTRIC - 2500 DA'; updatePrice(); });
+  cardBms.addEventListener('click', () => { modelSel.value = 'BMS ELECTRIC - 2400 DA'; updatePrice(); });
   cardChnt.addEventListener('click', () => { modelSel.value = 'CHNT - 4200 DA'; updatePrice(); });
 
   document.getElementById('plusBtn').addEventListener('click', ()=>{ qty++; qtyVal.textContent=qty; qtyHidden.value=qty; updatePrice(); });
